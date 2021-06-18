@@ -11,22 +11,22 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.UnsavedRevision;
-import com.couchbase.lite.mockserver.MockBulkDocs;
-import com.couchbase.lite.mockserver.MockCheckpointPut;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockDocumentGet;
-import com.couchbase.lite.mockserver.MockDocumentPut;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.mockserver.MockRevsDiff;
-import com.couchbase.lite.support.MultipartReader;
-import com.couchbase.lite.support.MultipartReaderDelegate;
-import com.couchbase.lite.util.Utils;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.UnsavedRevision;
+import com.couchbase.lite.v1.mockserver.MockBulkDocs;
+import com.couchbase.lite.v1.mockserver.MockCheckpointPut;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockDocumentGet;
+import com.couchbase.lite.v1.mockserver.MockDocumentPut;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.mockserver.MockRevsDiff;
+import com.couchbase.lite.v1.support.MultipartReader;
+import com.couchbase.lite.v1.support.MultipartReaderDelegate;
+import com.couchbase.lite.v1.util.Utils;
 
 import java.util.Arrays;
 import java.util.Locale;

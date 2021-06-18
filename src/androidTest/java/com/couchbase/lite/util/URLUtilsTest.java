@@ -1,6 +1,6 @@
-package com.couchbase.lite.util;
+package com.couchbase.lite.v1.util;
 
-import com.couchbase.lite.LiteTestCase;
+import com.couchbase.lite.v1.LiteTestCase;
 
 import java.net.URL;
 

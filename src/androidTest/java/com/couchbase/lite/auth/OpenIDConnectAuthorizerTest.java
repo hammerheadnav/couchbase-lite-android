@@ -11,9 +11,10 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
-import com.couchbase.lite.LiteTestCase;
+import com.couchbase.lite.v1.LiteTestCase;
+import com.couchbase.lite.v1.auth.TokenStoreFactory;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -28,7 +29,7 @@ public class OpenIDConnectAuthorizerTest extends LiteTestCase {
     @Override
     public void setUp() throws Exception {
         super.setUp();
-        authorizer = new com.couchbase.lite.auth.OpenIDConnectAuthorizer(
+        authorizer = new com.couchbase.lite.v1.auth.OpenIDConnectAuthorizer(
                 new OIDCLoginCallback() {
                     @Override
                     public void callback(URL loginURL, URL authBaseURL,

@@ -1,7 +1,8 @@
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
 
-import com.couchbase.lite.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.auth.TokenStoreFactory;
 
 import java.net.URL;
 import java.util.HashMap;

@@ -13,14 +13,14 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.android;
+package com.couchbase.lite.v1.android;
 
 import android.os.Build;
 import android.os.Looper;
 
-import com.couchbase.lite.internal.database.DatabasePlatformSupport;
-import com.couchbase.lite.storage.SQLiteStorageEngineBase;
-import com.couchbase.lite.util.ICUUtils;
+import com.couchbase.lite.v1.internal.database.DatabasePlatformSupport;
+import com.couchbase.lite.v1.storage.SQLiteStorageEngineBase;
+import com.couchbase.lite.v1.util.ICUUtils;
 
 public class AndroidSQLiteStorageEngine extends SQLiteStorageEngineBase {
     private android.content.Context context;

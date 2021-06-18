@@ -11,16 +11,16 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.syncgateway;
+package com.couchbase.lite.v1.syncgateway;
 
-import com.couchbase.lite.Database;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.QueryOptions;
-import com.couchbase.lite.QueryRow;
-import com.couchbase.lite.auth.AuthenticatorFactory;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.Database;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.QueryOptions;
+import com.couchbase.lite.v1.QueryRow;
+import com.couchbase.lite.v1.auth.AuthenticatorFactory;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.util.Log;
 
 import java.net.URL;
 import java.util.Arrays;

@@ -11,13 +11,13 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.multithreads;
+package com.couchbase.lite.v1.multithreads;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.util.Log;
 
 import java.net.URL;
 import java.util.HashMap;

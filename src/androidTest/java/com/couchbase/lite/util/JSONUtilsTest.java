@@ -11,9 +11,9 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.util;
+package com.couchbase.lite.v1.util;
 
-import com.couchbase.lite.LiteTestCase;
+import com.couchbase.lite.v1.LiteTestCase;
 
 import java.util.ArrayList;
 import java.util.HashMap;

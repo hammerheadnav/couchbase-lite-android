@@ -11,7 +11,7 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
 import junit.framework.Assert;
 
@@ -26,7 +26,7 @@ public class Base64Test extends LiteTestCase {
 
         String output1a = new String(android.util.Base64.decode(input1, android.util.Base64.DEFAULT));
         Assert.assertEquals(expected1, output1a);
-        String output1b =  new String(com.couchbase.lite.util.Base64.decode(input1, com.couchbase.lite.util.Base64.DEFAULT));
+        String output1b =  new String(com.couchbase.lite.v1.util.Base64.decode(input1, com.couchbase.lite.v1.util.Base64.DEFAULT));
         Assert.assertEquals(expected1, output1b);
 
         String input2 = "eyJleHAiOjEzNTgyOTY0Mzg0OTUsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDk4NC8ifQ";
@@ -34,7 +34,7 @@ public class Base64Test extends LiteTestCase {
 
         String output2a = new String(android.util.Base64.decode(input2, android.util.Base64.DEFAULT));
         Assert.assertEquals(expected2, output2a);
-        String output2b = new String(com.couchbase.lite.util.Base64.decode(input2, com.couchbase.lite.util.Base64.DEFAULT));
+        String output2b = new String(com.couchbase.lite.v1.util.Base64.decode(input2, com.couchbase.lite.v1.util.Base64.DEFAULT));
         Assert.assertEquals(expected2, output2b);
     }
 }

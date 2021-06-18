@@ -15,14 +15,14 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.internal.AttachmentInternal;
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.support.Base64;
-import com.couchbase.lite.support.security.SymmetricKeyException;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.TextUtils;
+import com.couchbase.lite.v1.internal.AttachmentInternal;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.support.Base64;
+import com.couchbase.lite.v1.support.security.SymmetricKeyException;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.TextUtils;
 
 import junit.framework.Assert;
 
@@ -338,7 +338,7 @@ public class DatabaseAttachmentTest extends LiteTestCaseWithDB {
     public void testStreamAttachmentBlobStoreWriter() throws Exception {
         BlobStore attachments = database.getAttachmentStore();
 
-        BlobStoreWriter blobWriter = new com.couchbase.lite.BlobStoreWriter(attachments);
+        BlobStoreWriter blobWriter = new com.couchbase.lite.v1.BlobStoreWriter(attachments);
         String testBlob = "foo";
         blobWriter.appendData(new String(testBlob).getBytes());
         blobWriter.finish();

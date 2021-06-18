@@ -11,12 +11,12 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.mockserver;
+package com.couchbase.lite.v1.mockserver;
 
-import com.couchbase.lite.BlobKey;
-import com.couchbase.lite.BlobStore;
-import com.couchbase.lite.Manager;
-import com.couchbase.lite.support.Base64;
+import com.couchbase.lite.v1.BlobKey;
+import com.couchbase.lite.v1.BlobStore;
+import com.couchbase.lite.v1.Manager;
+import com.couchbase.lite.v1.support.Base64;
 
 import org.apache.commons.io.IOUtils;
 

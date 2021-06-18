@@ -15,16 +15,16 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite.performance;
+package com.couchbase.lite.v1.performance;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.Emitter;
-import com.couchbase.lite.Mapper;
-import com.couchbase.lite.Reducer;
-import com.couchbase.lite.TransactionalTask;
-import com.couchbase.lite.View;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.Emitter;
+import com.couchbase.lite.v1.Mapper;
+import com.couchbase.lite.v1.Reducer;
+import com.couchbase.lite.v1.TransactionalTask;
+import com.couchbase.lite.v1.View;
+import com.couchbase.lite.v1.util.Log;
 
 import java.util.HashMap;
 import java.util.List;

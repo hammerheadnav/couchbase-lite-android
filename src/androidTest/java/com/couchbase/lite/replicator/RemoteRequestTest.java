@@ -11,16 +11,16 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.mockserver.MockCheckpointPut;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.mockserver.WrappedSmartMockResponse;
-import com.couchbase.lite.support.CouchbaseLiteHttpClientFactory;
-import com.couchbase.lite.support.PersistentCookieJar;
-import com.couchbase.lite.util.Utils;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.mockserver.MockCheckpointPut;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.mockserver.WrappedSmartMockResponse;
+import com.couchbase.lite.v1.support.CouchbaseLiteHttpClientFactory;
+import com.couchbase.lite.v1.support.PersistentCookieJar;
+import com.couchbase.lite.v1.util.Utils;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
      */
     public void testRetryLastRequestSuccess() throws Exception {
         // lower retry to speed up test
-        com.couchbase.lite.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
+        com.couchbase.lite.v1.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
 
         PersistentCookieJar cookieStore = database.getPersistentCookieStore();
         CouchbaseLiteHttpClientFactory factory = new CouchbaseLiteHttpClientFactory(cookieStore);
@@ -60,7 +60,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
         dispatcher.setServerType(MockDispatcher.ServerType.SYNC_GW);
 
         // respond with 503 error for the first MAX_RETRIES - 1 requests
-        int num503Responses = com.couchbase.lite.replicator.RemoteRequestRetry.MAX_RETRIES - 1;
+        int num503Responses = com.couchbase.lite.v1.replicator.RemoteRequestRetry.MAX_RETRIES - 1;
         for (int i = 0; i < num503Responses; i++) {
             dispatcher.enqueueResponse(MockHelper.PATH_REGEX_CHECKPOINT,
                     new MockResponse().setResponseCode(503));
@@ -125,7 +125,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
             assertTrue(success);
 
             // make sure that we saw MAX_RETRIES requests sent to server
-            for (int i = 0; i < com.couchbase.lite.replicator.RemoteRequestRetry.MAX_RETRIES; i++) {
+            for (int i = 0; i < com.couchbase.lite.v1.replicator.RemoteRequestRetry.MAX_RETRIES; i++) {
                 RecordedRequest recordedRequest =
                         dispatcher.takeRequest(MockHelper.PATH_REGEX_CHECKPOINT);
                 assertNotNull(recordedRequest);
@@ -141,7 +141,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
 
     public void testRetryAllRequestsFail() throws Exception {
         // lower retry to speed up test
-        com.couchbase.lite.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
+        com.couchbase.lite.v1.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
 
         PersistentCookieJar cookieStore = database.getPersistentCookieStore();
         CouchbaseLiteHttpClientFactory factory = new CouchbaseLiteHttpClientFactory(cookieStore);
@@ -152,7 +152,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
         dispatcher.setServerType(MockDispatcher.ServerType.SYNC_GW);
 
         // respond with 503 error for all requests
-        int num503Responses = com.couchbase.lite.replicator.RemoteRequestRetry.MAX_RETRIES + 1;
+        int num503Responses = com.couchbase.lite.v1.replicator.RemoteRequestRetry.MAX_RETRIES + 1;
         for (int i = 0; i < num503Responses; i++) {
             dispatcher.enqueueResponse(MockHelper.PATH_REGEX_CHECKPOINT,
                     new MockResponse().setResponseCode(503));
@@ -214,7 +214,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
             assertTrue(success);
 
             // make sure that we saw MAX_RETRIES requests sent to server
-            for (int i = 0; i < com.couchbase.lite.replicator.RemoteRequestRetry.MAX_RETRIES; i++) {
+            for (int i = 0; i < com.couchbase.lite.v1.replicator.RemoteRequestRetry.MAX_RETRIES; i++) {
                 RecordedRequest recordedRequest =
                         dispatcher.takeRequest(MockHelper.PATH_REGEX_CHECKPOINT);
                 assertNotNull(recordedRequest);
@@ -234,9 +234,9 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
      */
     public void testRetryQueueDeadlock() throws Exception {
         // lower retry to speed up test
-        int ORG_RETRY_DELAY_MS = com.couchbase.lite.replicator.RemoteRequestRetry.RETRY_DELAY_MS;
+        int ORG_RETRY_DELAY_MS = com.couchbase.lite.v1.replicator.RemoteRequestRetry.RETRY_DELAY_MS;
         try {
-            com.couchbase.lite.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
+            com.couchbase.lite.v1.replicator.RemoteRequestRetry.RETRY_DELAY_MS = 5;
 
             PersistentCookieJar cookieStore = database.getPersistentCookieStore();
             CouchbaseLiteHttpClientFactory factory = new CouchbaseLiteHttpClientFactory(cookieStore);
@@ -320,7 +320,7 @@ public class RemoteRequestTest extends LiteTestCaseWithDB {
                 assertTrue(MockHelper.shutdown(server, dispatcher));
             }
         } finally {
-            com.couchbase.lite.replicator.RemoteRequestRetry.RETRY_DELAY_MS = ORG_RETRY_DELAY_MS;
+            com.couchbase.lite.v1.replicator.RemoteRequestRetry.RETRY_DELAY_MS = ORG_RETRY_DELAY_MS;
         }
     }
 

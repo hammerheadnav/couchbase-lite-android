@@ -11,10 +11,10 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
 
-import com.couchbase.lite.Context;
+import com.couchbase.lite.v1.Context;
 
 /**
  * Created by hideki on 6/23/16.

@@ -15,12 +15,12 @@
  *
  */
 
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.support.FileDirUtils;
-import com.couchbase.lite.support.security.SymmetricKey;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.TextUtils;
+import com.couchbase.lite.v1.support.FileDirUtils;
+import com.couchbase.lite.v1.support.security.SymmetricKey;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.TextUtils;
 
 import junit.framework.Assert;
 

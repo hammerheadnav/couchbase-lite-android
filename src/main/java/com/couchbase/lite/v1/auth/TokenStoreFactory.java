@@ -11,13 +11,13 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
 
 import android.os.Build;
 
-import com.couchbase.lite.Context;
-import com.couchbase.lite.android.AndroidContext;
+import com.couchbase.lite.v1.Context;
+import com.couchbase.lite.v1.android.AndroidContext;
 
 /**
  * Created by hideki on 6/22/16.

@@ -11,18 +11,18 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.internal.Body;
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.support.FileDirUtils;
-import com.couchbase.lite.support.RevisionUtils;
-import com.couchbase.lite.util.IOUtils;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.TextUtils;
+import com.couchbase.lite.v1.internal.Body;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.support.FileDirUtils;
+import com.couchbase.lite.v1.support.RevisionUtils;
+import com.couchbase.lite.v1.util.IOUtils;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.TextUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

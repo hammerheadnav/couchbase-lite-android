@@ -12,9 +12,9 @@
 // and limitations under the License.
 //
 
-package com.couchbase.lite.util;
+package com.couchbase.lite.v1.util;
 
-import com.couchbase.lite.LiteTestCase;
+import com.couchbase.lite.v1.LiteTestCase;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 

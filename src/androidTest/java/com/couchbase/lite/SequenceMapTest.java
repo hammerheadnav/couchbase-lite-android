@@ -11,7 +11,7 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
 import junit.framework.Assert;
 
@@ -19,7 +19,7 @@ public class SequenceMapTest extends LiteTestCase {
 	
 	public void testSequenceMap() {
 		
-		com.couchbase.lite.support.SequenceMap map = new com.couchbase.lite.support.SequenceMap();
+		com.couchbase.lite.v1.support.SequenceMap map = new com.couchbase.lite.v1.support.SequenceMap();
 		
 		Assert.assertEquals(0, map.getCheckpointedSequence());
 		Assert.assertEquals(null, map.getCheckpointedValue());

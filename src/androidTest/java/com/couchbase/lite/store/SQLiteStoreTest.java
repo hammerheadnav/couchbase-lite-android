@@ -11,12 +11,12 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.store;
+package com.couchbase.lite.v1.store;
 
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.SavedRevision;
-import com.couchbase.lite.UnsavedRevision;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.SavedRevision;
+import com.couchbase.lite.v1.UnsavedRevision;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

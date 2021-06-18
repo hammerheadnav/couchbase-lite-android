@@ -15,14 +15,14 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.View.TDViewCollation;
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.store.Store;
-import com.couchbase.lite.store.StoreDelegate;
-import com.couchbase.lite.util.CountDown;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.View.TDViewCollation;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.store.Store;
+import com.couchbase.lite.v1.store.StoreDelegate;
+import com.couchbase.lite.v1.util.CountDown;
+import com.couchbase.lite.v1.util.Log;
 
 import junit.framework.Assert;
 

@@ -15,9 +15,9 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite.performance;
+package com.couchbase.lite.v1.performance;
 
-import com.couchbase.lite.Document;
+import com.couchbase.lite.v1.Document;
 
 import java.util.Arrays;
 import java.util.HashMap;

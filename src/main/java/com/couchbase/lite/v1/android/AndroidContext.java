@@ -11,14 +11,14 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.android;
+package com.couchbase.lite.v1.android;
 
 import android.os.Build;
 
-import com.couchbase.lite.Context;
-import com.couchbase.lite.NetworkReachabilityManager;
-import com.couchbase.lite.storage.SQLiteStorageEngineFactory;
-import com.couchbase.lite.support.Version;
+import com.couchbase.lite.v1.Context;
+import com.couchbase.lite.v1.NetworkReachabilityManager;
+import com.couchbase.lite.v1.storage.SQLiteStorageEngineFactory;
+import com.couchbase.lite.v1.support.Version;
 
 import java.io.File;
 import java.util.Locale;

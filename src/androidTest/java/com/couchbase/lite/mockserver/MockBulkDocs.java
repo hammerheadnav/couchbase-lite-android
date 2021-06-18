@@ -11,11 +11,11 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.mockserver;
+package com.couchbase.lite.v1.mockserver;
 
-import com.couchbase.lite.Database;
-import com.couchbase.lite.Manager;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.Database;
+import com.couchbase.lite.v1.Manager;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;

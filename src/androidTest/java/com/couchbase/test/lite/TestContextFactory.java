@@ -13,7 +13,7 @@
  */
 package com.couchbase.test.lite;
 
-import com.couchbase.lite.Context;
+import com.couchbase.lite.v1.Context;
 
 /**
  * Created by pasin on 8/27/15.

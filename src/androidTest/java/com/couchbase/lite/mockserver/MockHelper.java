@@ -11,11 +11,11 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.mockserver;
+package com.couchbase.lite.v1.mockserver;
 
-import com.couchbase.lite.Manager;
-import com.couchbase.lite.Misc;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.Manager;
+import com.couchbase.lite.v1.Misc;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -118,7 +118,7 @@ public class MockHelper {
         Buffer clone = request.getBody().clone();
         byte[] body = clone.readByteArray();
         if (isGzip(request)) {
-            body = com.couchbase.lite.util.Utils.decompressByGzip(body);
+            body = com.couchbase.lite.v1.util.Utils.decompressByGzip(body);
         }
         return body;
     }

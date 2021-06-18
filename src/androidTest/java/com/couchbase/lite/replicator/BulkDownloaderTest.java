@@ -11,18 +11,18 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.mockserver.WrappedSmartMockResponse;
-import com.couchbase.lite.support.CouchbaseLiteHttpClientFactory;
-import com.couchbase.lite.support.PersistentCookieJar;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.Utils;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.mockserver.WrappedSmartMockResponse;
+import com.couchbase.lite.v1.support.CouchbaseLiteHttpClientFactory;
+import com.couchbase.lite.v1.support.PersistentCookieJar;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.Utils;
 
 import java.net.URL;
 import java.util.ArrayList;

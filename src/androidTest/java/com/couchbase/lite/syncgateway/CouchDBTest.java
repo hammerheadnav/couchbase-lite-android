@@ -1,9 +1,9 @@
-package com.couchbase.lite.syncgateway;
+package com.couchbase.lite.v1.syncgateway;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.replicator.Replication;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.replicator.Replication;
 
 import java.net.MalformedURLException;
 import java.net.URL;

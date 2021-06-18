@@ -11,14 +11,14 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.mockserver.MockChangesFeedNoResponse;
-import com.couchbase.lite.mockserver.MockCheckpointPut;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.mockserver.MockChangesFeedNoResponse;
+import com.couchbase.lite.v1.mockserver.MockCheckpointPut;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.util.Log;
 
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;

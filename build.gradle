@@ -9,9 +9,17 @@ version = System.getenv("MAVEN_UPLOAD_VERSION")
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:3.6.4'
+    }
+}
+
+allprojects {
+    repositories {
+        google() // and here
+        jcenter()
     }
 }
 
@@ -21,13 +29,21 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main {
+        java.srcDirs = [
+                'src/main/java'
+        ]
+    }
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 24
+        minSdkVersion 23
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -35,6 +51,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_6
         targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
     }
 
     buildTypes {
@@ -63,18 +83,14 @@ dependencies {
             project(':libraries:couchbase-lite-java-core') :
             'com.couchbase.lite:couchbase-lite-java-core:' + version
 
-    compile buildAndroidWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-native:sqlite-custom') :
-            'com.couchbase.lite:couchbase-lite-android-sqlite-custom:' + version
+    compile 'com.couchbase.lite:couchbase-lite-android-sqlite-custom:1.4.1'
 
     // Libraries required for tests only:
-    androidTestCompile buildAndroidWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-native:sqlcipher') :
-            'com.couchbase.lite:couchbase-lite-android-sqlcipher:' + version
+    androidTestCompile 'com.couchbase.lite:couchbase-lite-android-sqlcipher:1.4.1'
 
-    androidTestCompile buildAndroidWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-forestdb') :
-            'com.couchbase.lite:couchbase-lite-android-forestdb:' + version
+//    androidTestCompile buildAndroidWithArtifacts == null ?
+//            project(':libraries:couchbase-lite-java-forestdb') :
+//            'com.couchbase.lite:couchbase-lite-android-forestdb:' + version
 
     androidTestCompile 'commons-io:commons-io:2.0.1'
     androidTestCompile 'com.squareup.okhttp3:mockwebserver:3.3.1'
@@ -124,38 +140,38 @@ task createMavenDirectory(type: Exec) {
 createMavenDirectory.onlyIf { System.getenv("MAVEN_UPLOAD_REPO_URL").contains("files") }
 
 // first create the directory, then do the upload
-task uploadArchivesWrapper(dependsOn: createMavenDirectory) << {
-    uploadArchives.execute()
-}
-
-def mavenPath() {
-    System.getenv("MAVEN_BUILD_LOCAL") == "true" ?
-            'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath :
-            System.getenv("MAVEN_UPLOAD_REPO_URL")
-}
-
-// this will upload, but will not first create a directory (which is needed on some servers)
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: mavenPath()) {
-                authentication(userName: System.getenv("MAVEN_UPLOAD_USERNAME"), password: System.getenv("MAVEN_UPLOAD_PASSWORD"))
-            }
-            pom.version = System.getenv("MAVEN_UPLOAD_VERSION") != null ? System.getenv("MAVEN_UPLOAD_VERSION") : ''
-            pom.groupId = 'com.couchbase.lite'
-            pom.artifactId = 'couchbase-lite-android'
-            pom.project {
-                licenses {
-                    license {
-                        name 'Couchbase Community Edition License Agreement'
-                        url 'http://www.couchbase.com/agreement/community'
-                        distribution 'repo'
-                    }
-                }
-            }
-        }
-    }
-}
+//task uploadArchivesWrapper(dependsOn: createMavenDirectory) << {
+//    uploadArchives.execute()
+//}
+//
+//def mavenPath() {
+//    System.getenv("MAVEN_BUILD_LOCAL") == "true" ?
+//            'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath :
+//            System.getenv("MAVEN_UPLOAD_REPO_URL")
+//}
+//
+//// this will upload, but will not first create a directory (which is needed on some servers)
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: mavenPath()) {
+//                authentication(userName: System.getenv("MAVEN_UPLOAD_USERNAME"), password: System.getenv("MAVEN_UPLOAD_PASSWORD"))
+//            }
+//            pom.version = System.getenv("MAVEN_UPLOAD_VERSION") != null ? System.getenv("MAVEN_UPLOAD_VERSION") : ''
+//            pom.groupId = 'com.couchbase.lite'
+//            pom.artifactId = 'couchbase-lite-android'
+//            pom.project {
+//                licenses {
+//                    license {
+//                        name 'Couchbase Community Edition License Agreement'
+//                        url 'http://www.couchbase.com/agreement/community'
+//                        distribution 'repo'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 
 task sourcesJar(type: Jar) {

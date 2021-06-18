@@ -11,9 +11,9 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.support;
+package com.couchbase.lite.v1.support;
 
-import com.couchbase.lite.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
 
 import java.util.Arrays;
 import java.util.Calendar;

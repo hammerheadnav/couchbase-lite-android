@@ -11,7 +11,7 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -19,11 +19,11 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.security.KeyPairGeneratorSpec;
 
-import com.couchbase.lite.support.security.SymmetricKey;
-import com.couchbase.lite.support.security.SymmetricKeyException;
-import com.couchbase.lite.util.Base64;
-import com.couchbase.lite.util.ConversionUtils;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.support.security.SymmetricKey;
+import com.couchbase.lite.v1.support.security.SymmetricKeyException;
+import com.couchbase.lite.v1.util.Base64;
+import com.couchbase.lite.v1.util.ConversionUtils;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

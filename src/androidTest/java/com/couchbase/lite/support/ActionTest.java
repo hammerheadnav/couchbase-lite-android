@@ -15,12 +15,12 @@
  *
  */
 
-package com.couchbase.lite.support;
+package com.couchbase.lite.v1.support;
 
-import com.couchbase.lite.LiteTestCase;
-import com.couchbase.lite.support.action.Action;
-import com.couchbase.lite.support.action.ActionBlock;
-import com.couchbase.lite.support.action.ActionException;
+import com.couchbase.lite.v1.LiteTestCase;
+import com.couchbase.lite.v1.support.action.Action;
+import com.couchbase.lite.v1.support.action.ActionBlock;
+import com.couchbase.lite.v1.support.action.ActionException;
 
 import junit.framework.Assert;
 

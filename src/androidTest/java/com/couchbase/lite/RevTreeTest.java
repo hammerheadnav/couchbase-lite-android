@@ -15,9 +15,9 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.internal.RevisionInternal;
+import com.couchbase.lite.v1.internal.RevisionInternal;
 
 import java.util.ArrayList;
 import java.util.Arrays;

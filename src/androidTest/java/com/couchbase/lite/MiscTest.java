@@ -11,7 +11,7 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
 import junit.framework.Assert;
 
@@ -19,7 +19,7 @@ public class MiscTest extends LiteTestCase {
     public void testUnquoteString() {
         String testString = "attachment; filename=\"attach\"";
         String expected = "attachment; filename=attach";
-        String result = com.couchbase.lite.Misc.unquoteString(testString);
+        String result = com.couchbase.lite.v1.Misc.unquoteString(testString);
         Assert.assertEquals(expected, result);
     }
 }

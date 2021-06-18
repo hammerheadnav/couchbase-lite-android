@@ -15,8 +15,8 @@ package com.couchbase.test.lite;
 
 import android.test.*;
 
-import com.couchbase.lite.Context;
-import com.couchbase.lite.android.AndroidContext;
+import com.couchbase.lite.v1.Context;
+import com.couchbase.lite.v1.android.AndroidContext;
 
 import java.io.File;
 

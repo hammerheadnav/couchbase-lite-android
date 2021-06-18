@@ -11,15 +11,15 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.Manager;
-import com.couchbase.lite.SavedRevision;
-import com.couchbase.lite.UnsavedRevision;
-import com.couchbase.lite.support.HttpClientFactory;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.Manager;
+import com.couchbase.lite.v1.SavedRevision;
+import com.couchbase.lite.v1.UnsavedRevision;
+import com.couchbase.lite.v1.support.HttpClientFactory;
+import com.couchbase.lite.v1.util.Log;
 
 import junit.framework.Assert;
 

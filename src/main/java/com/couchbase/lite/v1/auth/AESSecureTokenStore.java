@@ -1,4 +1,4 @@
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.os.Build;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 
-import com.couchbase.lite.util.Base64;
-import com.couchbase.lite.util.ConversionUtils;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.util.Base64;
+import com.couchbase.lite.v1.util.ConversionUtils;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

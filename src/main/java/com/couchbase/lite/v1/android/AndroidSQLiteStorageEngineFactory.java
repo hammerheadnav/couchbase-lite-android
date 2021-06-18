@@ -11,11 +11,11 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.android;
+package com.couchbase.lite.v1.android;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.storage.SQLiteStorageEngine;
-import com.couchbase.lite.storage.SQLiteStorageEngineFactory;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.storage.SQLiteStorageEngine;
+import com.couchbase.lite.v1.storage.SQLiteStorageEngineFactory;
 
 public class AndroidSQLiteStorageEngineFactory implements SQLiteStorageEngineFactory {
     private android.content.Context context = null;

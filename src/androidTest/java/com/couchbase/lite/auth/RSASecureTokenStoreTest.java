@@ -11,9 +11,9 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
-import com.couchbase.lite.LiteTestCase;
+import com.couchbase.lite.v1.LiteTestCase;
 
 /**
  * NOTE: This test only contains unit test for Android. All test causes compilation error for Java.

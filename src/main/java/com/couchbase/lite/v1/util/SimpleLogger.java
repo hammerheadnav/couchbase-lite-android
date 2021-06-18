@@ -14,7 +14,7 @@
  * and limitations under the License.
  */
 
-package com.couchbase.lite.util;
+package com.couchbase.lite.v1.util;
 
 import android.util.Log;
 

@@ -10,13 +10,13 @@
  * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
- */package com.couchbase.lite.performance;
+ */package com.couchbase.lite.v1.performance;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.TransactionalTask;
-import com.couchbase.lite.UnsavedRevision;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.TransactionalTask;
+import com.couchbase.lite.v1.UnsavedRevision;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.ByteArrayInputStream;
 import java.util.Arrays;

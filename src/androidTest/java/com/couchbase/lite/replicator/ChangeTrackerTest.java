@@ -11,10 +11,10 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.IOException;
 import java.net.URL;

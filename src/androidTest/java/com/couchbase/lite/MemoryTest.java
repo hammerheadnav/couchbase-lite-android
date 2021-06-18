@@ -1,6 +1,6 @@
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.util.Log;
 
 import java.io.IOException;
 import java.util.Arrays;

@@ -11,26 +11,26 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.internal.Body;
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockDocumentGet;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.replicator.ReplicationState;
-import com.couchbase.lite.router.Router;
-import com.couchbase.lite.router.RouterCallbackBlock;
-import com.couchbase.lite.router.URLConnection;
-import com.couchbase.lite.router.URLStreamHandlerFactory;
-import com.couchbase.lite.storage.SQLiteNativeLibrary;
-import com.couchbase.lite.store.SQLiteStore;
-import com.couchbase.lite.support.FileDirUtils;
-import com.couchbase.lite.support.Version;
-import com.couchbase.lite.support.security.SymmetricKey;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.Utils;
+import com.couchbase.lite.v1.internal.Body;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockDocumentGet;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.replicator.ReplicationState;
+import com.couchbase.lite.v1.router.Router;
+import com.couchbase.lite.v1.router.RouterCallbackBlock;
+import com.couchbase.lite.v1.router.URLConnection;
+import com.couchbase.lite.v1.router.URLStreamHandlerFactory;
+import com.couchbase.lite.v1.storage.SQLiteNativeLibrary;
+import com.couchbase.lite.v1.store.SQLiteStore;
+import com.couchbase.lite.v1.support.FileDirUtils;
+import com.couchbase.lite.v1.support.Version;
+import com.couchbase.lite.v1.support.security.SymmetricKey;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -419,7 +419,7 @@ public class LiteTestCaseWithDB extends LiteTestCase {
                 conn.setRequestInputStream(bais);
             }
 
-            Router router = new com.couchbase.lite.router.Router(manager, conn);
+            Router router = new com.couchbase.lite.v1.router.Router(manager, conn);
 
             final CountDownLatch latch = new CountDownLatch(1);
             router.setCallbackBlock(new RouterCallbackBlock() {

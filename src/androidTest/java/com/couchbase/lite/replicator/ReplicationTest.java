@@ -11,13 +11,13 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Database;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.auth.FacebookAuthorizer;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Database;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.auth.FacebookAuthorizer;
+import com.couchbase.lite.v1.util.Log;
 
 import junit.framework.Assert;
 

@@ -11,30 +11,30 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.syncgateway;
+package com.couchbase.lite.v1.syncgateway;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Database;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.TransactionalTask;
-import com.couchbase.lite.UnsavedRevision;
-import com.couchbase.lite.auth.Authenticator;
-import com.couchbase.lite.auth.AuthenticatorFactory;
-import com.couchbase.lite.auth.MemTokenStore;
-import com.couchbase.lite.auth.OIDCLoginCallback;
-import com.couchbase.lite.auth.OIDCLoginContinuation;
-import com.couchbase.lite.auth.OpenIDConnectAuthorizer;
-import com.couchbase.lite.auth.TokenStore;
-import com.couchbase.lite.auth.TokenStoreFactory;
-import com.couchbase.lite.replicator.RemoteFormRequest;
-import com.couchbase.lite.replicator.RemoteRequest;
-import com.couchbase.lite.replicator.RemoteRequestCompletion;
-import com.couchbase.lite.replicator.RemoteRequestResponseException;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.support.CouchbaseLiteHttpClientFactory;
-import com.couchbase.lite.support.PersistentCookieJar;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Database;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.TransactionalTask;
+import com.couchbase.lite.v1.UnsavedRevision;
+import com.couchbase.lite.v1.auth.Authenticator;
+import com.couchbase.lite.v1.auth.AuthenticatorFactory;
+import com.couchbase.lite.v1.auth.MemTokenStore;
+import com.couchbase.lite.v1.auth.OIDCLoginCallback;
+import com.couchbase.lite.v1.auth.OIDCLoginContinuation;
+import com.couchbase.lite.v1.auth.OpenIDConnectAuthorizer;
+import com.couchbase.lite.v1.auth.TokenStore;
+import com.couchbase.lite.v1.auth.TokenStoreFactory;
+import com.couchbase.lite.v1.replicator.RemoteFormRequest;
+import com.couchbase.lite.v1.replicator.RemoteRequest;
+import com.couchbase.lite.v1.replicator.RemoteRequestCompletion;
+import com.couchbase.lite.v1.replicator.RemoteRequestResponseException;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.support.CouchbaseLiteHttpClientFactory;
+import com.couchbase.lite.v1.support.PersistentCookieJar;
+import com.couchbase.lite.v1.util.Log;
 
 import junit.framework.Assert;
 

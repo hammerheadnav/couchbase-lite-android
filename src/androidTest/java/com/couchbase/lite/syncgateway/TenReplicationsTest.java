@@ -11,10 +11,10 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.syncgateway;
+package com.couchbase.lite.v1.syncgateway;
 
-import com.couchbase.lite.LiteTestCaseWithDB;
-import com.couchbase.lite.replicator.Replication;
+import com.couchbase.lite.v1.LiteTestCaseWithDB;
+import com.couchbase.lite.v1.replicator.Replication;
 
 import java.util.ArrayList;
 import java.util.HashMap;

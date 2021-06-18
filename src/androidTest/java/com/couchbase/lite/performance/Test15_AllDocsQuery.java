@@ -13,15 +13,15 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite.performance;
+package com.couchbase.lite.v1.performance;
 
-import com.couchbase.lite.CouchbaseLiteException;
-import com.couchbase.lite.Document;
-import com.couchbase.lite.Query;
-import com.couchbase.lite.QueryEnumerator;
-import com.couchbase.lite.QueryRow;
-import com.couchbase.lite.TransactionalTask;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.CouchbaseLiteException;
+import com.couchbase.lite.v1.Document;
+import com.couchbase.lite.v1.Query;
+import com.couchbase.lite.v1.QueryEnumerator;
+import com.couchbase.lite.v1.QueryRow;
+import com.couchbase.lite.v1.TransactionalTask;
+import com.couchbase.lite.v1.util.Log;
 
 import java.util.Arrays;
 import java.util.HashMap;

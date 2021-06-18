@@ -11,19 +11,19 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.internal.RevisionInternal;
-import com.couchbase.lite.mockserver.MockCheckpointPut;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.store.SQLiteStore;
-import com.couchbase.lite.support.FileDirUtils;
-import com.couchbase.lite.support.Version;
-import com.couchbase.lite.util.Log;
-import com.couchbase.lite.util.Utils;
-import com.couchbase.lite.util.ZipUtils;
+import com.couchbase.lite.v1.internal.RevisionInternal;
+import com.couchbase.lite.v1.mockserver.MockCheckpointPut;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.store.SQLiteStore;
+import com.couchbase.lite.v1.support.FileDirUtils;
+import com.couchbase.lite.v1.support.Version;
+import com.couchbase.lite.v1.util.Log;
+import com.couchbase.lite.v1.util.Utils;
+import com.couchbase.lite.v1.util.ZipUtils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -649,7 +649,7 @@ public class ManagerTest extends LiteTestCaseWithDB {
         assertNotNull(replacedb);
 
         // Verify storage type matchs what we requested:
-        Class forestDBStoreClass = Class.forName("com.couchbase.lite.store.ForestDBStore");
+        Class forestDBStoreClass = Class.forName("com.couchbase.lite.v1.store.ForestDBStore");
         Class storeClass = isSQLiteDB() ? SQLiteStore.class : forestDBStoreClass;
         assertTrue(replacedb.getStore().getClass().equals(storeClass));
 

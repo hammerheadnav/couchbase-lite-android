@@ -11,9 +11,9 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.replicator;
+package com.couchbase.lite.v1.replicator;
 
-import com.couchbase.lite.support.HttpClientFactory;
+import com.couchbase.lite.v1.support.HttpClientFactory;
 
 import java.net.URL;
 import java.util.List;

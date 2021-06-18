@@ -11,11 +11,11 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.support.CustomByteArrayOutputStream;
-import com.couchbase.lite.support.MultipartReaderDelegate;
-import com.couchbase.lite.support.Range;
+import com.couchbase.lite.v1.support.CustomByteArrayOutputStream;
+import com.couchbase.lite.v1.support.MultipartReaderDelegate;
+import com.couchbase.lite.v1.support.Range;
 
 import junit.framework.Assert;
 
@@ -70,7 +70,7 @@ public class MultipartReaderTest extends LiteTestCase {
 
         for (String contentType : contentTypes.keySet()) {
             MultipartReaderDelegate delegate = null;
-            com.couchbase.lite.support.MultipartReader reader = new com.couchbase.lite.support.MultipartReader(contentType, delegate);
+            com.couchbase.lite.v1.support.MultipartReader reader = new com.couchbase.lite.v1.support.MultipartReader(contentType, delegate);
             byte[] expectedBoundary = (byte[]) contentTypes.get(contentType);
             byte[] boundary = reader.getBoundary();
             Assert.assertTrue(Arrays.equals(boundary, expectedBoundary));
@@ -78,7 +78,7 @@ public class MultipartReaderTest extends LiteTestCase {
 
         try {
             MultipartReaderDelegate delegate = null;
-            com.couchbase.lite.support.MultipartReader reader = new com.couchbase.lite.support.MultipartReader("multipart/related; boundary=\"BOUNDARY", delegate);
+            com.couchbase.lite.v1.support.MultipartReader reader = new com.couchbase.lite.v1.support.MultipartReader("multipart/related; boundary=\"BOUNDARY", delegate);
             Assert.assertTrue("Should not have gotten here, above lines should have thrown exception", false);
         } catch (Exception e) {
             // expected exception
@@ -87,7 +87,7 @@ public class MultipartReaderTest extends LiteTestCase {
 
     public void testParseHeaders() {
         String testString = new String("\r\nFoo: Bar\r\n Header : Val ue ");
-        com.couchbase.lite.support.MultipartReader reader = new com.couchbase.lite.support.MultipartReader("multipart/related;boundary=X", null);
+        com.couchbase.lite.v1.support.MultipartReader reader = new com.couchbase.lite.v1.support.MultipartReader("multipart/related;boundary=X", null);
         reader.parseHeaders(testString);
         Assert.assertEquals(reader.headers.keySet().size(), 2);
     }
@@ -95,7 +95,7 @@ public class MultipartReaderTest extends LiteTestCase {
     public void testSearchFor() throws Exception {
         String testString = new String("\r\n\r\n");
         byte[] testStringBytes = testString.getBytes(Charset.forName("UTF-8"));
-        com.couchbase.lite.support.MultipartReader reader = new com.couchbase.lite.support.MultipartReader("multipart/related;boundary=X", null);
+        com.couchbase.lite.v1.support.MultipartReader reader = new com.couchbase.lite.v1.support.MultipartReader("multipart/related;boundary=X", null);
         reader.appendData(testStringBytes);
         Range r = reader.searchFor(testStringBytes, 0);
         Assert.assertEquals(0, r.getLocation());
@@ -144,7 +144,7 @@ public class MultipartReaderTest extends LiteTestCase {
             ByteArrayInputStream mimeInputStream = new ByteArrayInputStream(mime);
             TestMultipartReaderDelegate delegate = new TestMultipartReaderDelegate();
             String contentType = "multipart/related; boundary=\"BOUNDARY\"";
-            com.couchbase.lite.support.MultipartReader reader = new com.couchbase.lite.support.MultipartReader(contentType, delegate);
+            com.couchbase.lite.v1.support.MultipartReader reader = new com.couchbase.lite.v1.support.MultipartReader(contentType, delegate);
             Assert.assertFalse(reader.finished());
 
             int location = 0;

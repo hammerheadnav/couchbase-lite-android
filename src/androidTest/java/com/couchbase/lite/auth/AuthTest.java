@@ -11,11 +11,11 @@
 // either express or implied. See the License for the specific language governing permissions
 // and limitations under the License.
 //
-package com.couchbase.lite.auth;
+package com.couchbase.lite.v1.auth;
 
-import com.couchbase.lite.Database;
-import com.couchbase.lite.LiteTestCase;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.Database;
+import com.couchbase.lite.v1.LiteTestCase;
+import com.couchbase.lite.v1.util.Log;
 
 import junit.framework.Assert;
 

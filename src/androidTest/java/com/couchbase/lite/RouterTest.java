@@ -11,21 +11,21 @@
  * either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.couchbase.lite;
+package com.couchbase.lite.v1;
 
-import com.couchbase.lite.javascript.JavaScriptReplicationFilterCompiler;
-import com.couchbase.lite.javascript.JavaScriptViewCompiler;
-import com.couchbase.lite.mockserver.MockChangesFeed;
-import com.couchbase.lite.mockserver.MockCheckpointGet;
-import com.couchbase.lite.mockserver.MockCheckpointPut;
-import com.couchbase.lite.mockserver.MockDispatcher;
-import com.couchbase.lite.mockserver.MockDocumentAllDocs;
-import com.couchbase.lite.mockserver.MockDocumentBulkGet;
-import com.couchbase.lite.mockserver.MockDocumentGet;
-import com.couchbase.lite.mockserver.MockHelper;
-import com.couchbase.lite.replicator.Replication;
-import com.couchbase.lite.router.URLConnection;
-import com.couchbase.lite.util.Log;
+import com.couchbase.lite.v1.javascript.JavaScriptReplicationFilterCompiler;
+import com.couchbase.lite.v1.javascript.JavaScriptViewCompiler;
+import com.couchbase.lite.v1.mockserver.MockChangesFeed;
+import com.couchbase.lite.v1.mockserver.MockCheckpointGet;
+import com.couchbase.lite.v1.mockserver.MockCheckpointPut;
+import com.couchbase.lite.v1.mockserver.MockDispatcher;
+import com.couchbase.lite.v1.mockserver.MockDocumentAllDocs;
+import com.couchbase.lite.v1.mockserver.MockDocumentBulkGet;
+import com.couchbase.lite.v1.mockserver.MockDocumentGet;
+import com.couchbase.lite.v1.mockserver.MockHelper;
+import com.couchbase.lite.v1.replicator.Replication;
+import com.couchbase.lite.v1.router.URLConnection;
+import com.couchbase.lite.v1.util.Log;
 
 import org.apache.commons.io.IOUtils;
 
@@ -56,7 +56,7 @@ public class RouterTest extends LiteTestCaseWithDB {
         Map<String, Object> responseBody = new HashMap<String, Object>();
         responseBody.put("CBLite", "Welcome");
         responseBody.put("couchdb", "Welcome");
-        responseBody.put("version", com.couchbase.lite.router.Router.getVersionString());
+        responseBody.put("version", com.couchbase.lite.v1.router.Router.getVersionString());
         send("GET", "/", Status.OK, responseBody);
 
         Map<String, Object> session = new HashMap<String, Object>();
